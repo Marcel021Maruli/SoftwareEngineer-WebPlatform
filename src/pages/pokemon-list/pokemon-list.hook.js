@@ -5,7 +5,9 @@ import {
   GET_POKEMONS_DETAILS,
 } from "modules/services/fetch-pokemon.graphql";
 import { scrollView } from "modules/utilities/scroll-view.util";
+
 import uniq from "lodash.uniq";
+import { lowercase } from "modules/utilities/lowercase.util";
 
 const usePokemonList = () => {
   const [offset, setOffset] = useState(0);
@@ -40,7 +42,7 @@ const usePokemonList = () => {
     try {
       setIsLoading(true);
       const payload = {
-        variables: { name: searchPokemon },
+        variables: { name: lowercase(searchPokemon) },
       };
       await getPokemonsSearch(payload);
     } catch (error) {

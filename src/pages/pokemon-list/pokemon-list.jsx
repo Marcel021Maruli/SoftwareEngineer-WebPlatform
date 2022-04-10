@@ -18,8 +18,6 @@ const PokemonList = memo(() => {
     isLoading,
     setSearchPokemon,
     handleOnSubmitSearch,
-    loadingGet,
-    loadingSearch,
     handleScrollView,
   } = usePokemonList();
 

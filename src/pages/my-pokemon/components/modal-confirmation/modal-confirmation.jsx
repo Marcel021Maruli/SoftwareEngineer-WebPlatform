@@ -1,7 +1,5 @@
 import React from "react";
 
-import Modal from "modules/components/modals";
-
 import { ModalConfirmationStyle } from "./modal-confirmation.style";
 
 const ModalConfirmation = ({ setShowModal, handleSubmit }) => {
