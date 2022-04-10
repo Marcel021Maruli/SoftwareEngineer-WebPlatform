@@ -1,0 +1,11 @@
+.PokemonList-table-link:link,
+.PokemonList-table-link:visited {
+  background-color: #f44336e3;
+  color: white;
+}
+
+.PokemonList-table-link:hover,
+.PokemonList-table-link:active {
+  opacity: 0.8;
+  background-color: #f44336e3;
+}

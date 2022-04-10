@@ -1,0 +1,30 @@
+.u-text-decoration--none {
+  text-decoration: none;
+  color: black;
+}
+
+.u-display-block {
+  display: block;
+}
+
+.u-display-none {
+  display: none;
+}
+
+.u-marginTop-12vh {
+  margin-top: 12vh;
+}
+
+.u-search-bg {
+  background-image: url("assets/images/Vector\ \(1\).png");
+}
+
+.u-position--stick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.u-border-radius--100 {
+  border-radius: 100%;
+}

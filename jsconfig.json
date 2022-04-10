@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["es2015", "es2015.promise", "es2016.array.include", "dom"],
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "types": ["jest"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs"
+  },
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"],
+  "include": [
+    "src",
+    "src/__test__/constant/.validator.test.js",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
+}

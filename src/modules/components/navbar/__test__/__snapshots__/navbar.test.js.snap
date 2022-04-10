@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar /> should match with a snapshot 1`] = `
+<div
+  class="Navbar css-10xn4hd"
+>
+  <ul
+    class="Navbar-ul"
+  >
+    <li
+      class="Navbar-li"
+    >
+      <a
+        class="Navbar-link--inactive"
+        href="/pokemon-list"
+      >
+        <img
+          alt="Pokemon Logo"
+          class="Navbar-logo"
+          src="pokemon-logo.png"
+        />
+      </a>
+    </li>
+  </ul>
+</div>
+`;
