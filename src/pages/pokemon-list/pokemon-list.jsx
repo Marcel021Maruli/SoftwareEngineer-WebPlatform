@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import { Link } from "react-router-dom";
 
 import usePokemonList from "./pokemon-list.hook";
 
@@ -7,10 +6,9 @@ import Search from "modules/components/search";
 import Navbar from "modules/components/navbar";
 import Loading from "modules/components/loading";
 
-import { capitalizeWord } from "modules/utilities/capitalize-word.util";
-
 import { PokemonTableLink } from "./pokemon-list.style";
 import { TableStyle, SearchContainerStyle } from "../styles/emotion/style";
+import PokemonTable from "./pokemon-list-table";
 
 const PokemonList = memo(() => {
   const {
@@ -40,39 +38,7 @@ const PokemonList = memo(() => {
               className={`Table-container ${PokemonTableLink}`}
               onScroll={handleScrollView}
             >
-              <table className="PokemonList Table">
-                <thead>
-                  <tr className="PokemonList Table-tr">
-                    <th className="PokemonList Table-th">Pokemon's Name</th>
-                    <th className="PokemonList Table-th">Detail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {pokemons &&
-                    pokemons?.map((result) => {
-                      return (
-                        <tr className="PokemonList Table-tr" key={result?.id}>
-                          <td className="PokemonList Table-td">
-                            {result?.name
-                              ? capitalizeWord(result?.name)
-                              : "No Pokemon Found"}
-                          </td>
-                          <td className="PokemonList Table-td">
-                            {result?.name && (
-                              <Link
-                                className={`PokemonList-table-link Table-link`}
-                                to={`/pokemon-details/${result?.id}/${result?.name}`}
-                              >
-                                See Detail
-                              </Link>
-                            )}
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  <tr></tr>
-                </tbody>
-              </table>
+              <PokemonTable data={pokemons} />
             </div>
           </div>
         </div>

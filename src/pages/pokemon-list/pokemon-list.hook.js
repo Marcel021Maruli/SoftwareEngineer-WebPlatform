@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useLazyQuery } from "@apollo/client";
 import {
   GET_POKEMONS,
@@ -72,6 +72,19 @@ const usePokemonList = () => {
     }
   };
 
+  // //USEMEMO EXAMPLE
+  // //You have to comment handleDefinePokemonList() and useEffect(()=>{...},[isFetching]) && UN-comment useEffect(coba)
+
+  // const coba = useMemo(() => {
+  //   if (dataPokemons?.pokemons?.results) {
+  //     setPokemons([...pokemons, ...dataPokemons?.pokemons?.results]);
+  //     return [...pokemons, ...dataPokemons?.pokemons?.results];
+  //   }
+  //   return [];
+  // }, [dataPokemons?.pokemons?.results]);
+
+  // NOT USING USEMEMO EXAMPLE
+
   const handleDefinePokemonList = (pokemonList) => {
     const hasNoPokemons =
       pokemonList &&
@@ -110,6 +123,10 @@ const usePokemonList = () => {
       handleDefinePokemonList(dataPokemons?.pokemons?.results);
     }
   }, [isFetching]);
+
+  // useEffect(() => {
+  //   console.log(coba);
+  // }, [coba]);
 
   return {
     isLoading,
